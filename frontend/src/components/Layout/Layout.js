@@ -14,12 +14,20 @@ const Layout = ({children,title,description,author,keywords}) => {
                 <meta name="author" content={author} />
                 <title>{title}</title>
             </Helmet>
-            <Header/>
-            <main style={{minHeight:'75vh'}}>
+            {/* <Header/>
+            <main style={{minHeight:'85vh',padding: '20px','@media only screen and (max-width: 768px)': { padding: '10px' } }}>
                 <ToastContainer autoClose={1000} />
                 {children}
                 </main>
-            <Footer/>
+            <Footer/> */}
+             <Header />
+    <main style={{ minHeight: '75vh', padding: '20px', boxSizing: 'border-box' }}>
+        <ToastContainer autoClose={1000} />
+        <div style={{ maxWidth: '100%', overflowX: 'auto' }}>
+            {children}
+        </div>
+    </main>
+    <Footer />
         </div>
     );
 }
