@@ -1,5 +1,6 @@
 // import Footer from "./Footer";
 import Header from "../Layout/Header.js";
+import Footer from "./Footer.js";
 import {Helmet} from "react-helmet";
 import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -14,11 +15,11 @@ const Layout = ({children,title,description,author,keywords}) => {
                 <title>{title}</title>
             </Helmet>
             <Header/>
-            <main style={{minHeight:'85vh'}}>
+            <main style={{minHeight:'75vh'}}>
                 <ToastContainer autoClose={1000} />
                 {children}
                 </main>
-            {/* <Footer/> */}
+            <Footer/>
         </div>
     );
 }

@@ -10,6 +10,11 @@ import Products from './pages/Admin/Products.js';
 import UpdateProduct from './pages/Admin/UpdateProduct';
 import Users from './pages/Admin/Users.js';
 import AdminOrders from './pages/Admin/AdminOrders.js';
+import PageNotFound from './pages/PageNotFound.js';
+import UserRoute from './components/Routes/UserRoute.js';
+import UserDashboard from './pages/user/UserDashboard.js';
+import UserProfile from './pages/user/UserProfile.js';
+import UserOrder from './pages/user/UserOrder.js';
 function App() {
   return (
     <BrowserRouter>
@@ -18,6 +23,12 @@ function App() {
       <Route path='/login' element={<Login />}/>
       <Route path='/register' element={<Register />}/>
       <Route path='/search' element={<Search/>}/>
+
+      <Route path="/dashboard" element={<UserRoute />}>
+          <Route path="user" element={<UserDashboard />} />
+          <Route path="user/profile" element={<UserProfile/>} />
+          <Route path="user/orders" element={<UserOrder/>} />
+        </Route>
       <Route path="/dashboard" element={<AdminRoute />}>
           <Route path="admin" element={<AdminDashboard />} />
           <Route path="admin/create-product" element={<CreateProduct/>} />
@@ -26,6 +37,8 @@ function App() {
           <Route path="admin/users" element={<Users/>} />
           <Route path="admin/orders" element={<AdminOrders/>} />
         </Route>
+
+        <Route path='/*' element={<PageNotFound />}/>
 
 
     </Routes>

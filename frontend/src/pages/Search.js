@@ -6,15 +6,16 @@ const Search = () => {
     // eslint-disable-next-line
   const [values, setValues] = useSearch();
   const navigate = useNavigate();
+  
   return (
     <Layout title={"Search results"}>
       <div className="container">
         <div className="text-center">
-          <h1>Search Resuts</h1>
+          <h1>Search Results</h1>
           <h6>
             {values?.results.length < 1
-              ? "No Products Found"
-              : `Found ${values?.results.length} Products`}
+              ? `No Products Found`
+              : `Found ${values?.results.length} Products related to your search`}
           </h6>
           <div className="d-flex flex-wrap mt-4">
             {values?.results.map((p) => (

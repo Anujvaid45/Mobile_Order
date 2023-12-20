@@ -187,10 +187,11 @@ const deleteProductController = async(req,res)=>{
 // filters
  const productFiltersController = async (req, res) => {
     try {
-      const { checked, radio } = req.body;
+      const {  radio ,memory} = req.body;
       let args = {};
-      if (checked.length > 0) args.category = checked;
+    //   if (checked.length > 0) args.category = checked;
       if (radio.length) args.price = { $gte: radio[0], $lte: radio[1] };
+      if(memory) args.memory = memory;
       const products = await productModel.find(args);
       res.status(200).send({
         success: true,

@@ -125,7 +125,7 @@ const Register = () => {
       </div>
       <div className="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
         <form onSubmit={handleSubmit}>
-        <div className="mb-3">
+        <div className=" mb-3 radio-container">
                         <input
                         
                         type="radio"
@@ -136,8 +136,8 @@ const Register = () => {
                         checked={role === '0'}
                         onChange={handleChange} 
                         />
-                        <label htmlFor="0" style={{paddingRight:'150px'}} className='label'>User</label>
-
+                        <label htmlFor="0"  className='label'>User</label>
+                        
                         <input
                         type="radio"
                         className='radio'

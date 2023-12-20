@@ -109,3 +109,41 @@ button:hover{
   height: 100%;
   }
   }
+
+  .radio-container {
+	padding-top: 10px;
+	display: flex;
+	align-items: center;
+  }
+  
+  .radio {
+	display: none;
+  }
+  
+  .label {
+	cursor: pointer;
+	padding: 8px 15px;
+	font-size: 16px;
+	color: #333;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	transition: background-color 0.3s, color 0.3s;
+	margin-left: 115px;
+  }
+  
+  .label:hover {
+	background-color: #f0f0f0;
+  }
+  
+  /* Style for the radio button when checked */
+  .radio:checked + .label {
+	background-color: #007bff;
+	color: #fff;
+	border-color: #007bff;
+  }
+  
+  /* Optional: Add some spacing between the radio buttons */
+  .label + .label {
+	margin-left: 10px;
+  }
+  
