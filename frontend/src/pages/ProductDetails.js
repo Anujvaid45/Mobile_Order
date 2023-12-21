@@ -34,7 +34,7 @@ const ProductDetails = () => {
     const getSimilarProduct = async (pid, cid) => {
         try {
             const { data } = await axios.get(
-                `http://localhost:5000/api/v1/product/related-product/${pid}/${cid}`
+                `https://mobile-backend-taxn.onrender.com/api/v1/product/related-product/${pid}/${cid}`
             );
 
             setRelatedProducts(data?.products);
