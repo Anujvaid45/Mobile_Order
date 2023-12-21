@@ -11,7 +11,7 @@ export default function UserRoute() {
 
   useEffect(() => {
     const authCheck = async () => {
-      const res = await axios.get("http://localhost:5000/api/v1/auth/user-auth");
+      const res = await axios.get("https://mobile-backend-taxn.onrender.com/api/v1/auth/user-auth");
       if (res.data.ok) {
         setOk(true);
       } else {

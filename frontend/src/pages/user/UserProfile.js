@@ -27,7 +27,7 @@ const UserProfile = () => {
     const handleSubmit = async (e) =>{
         e.preventDefault();
         try {
-            const { data } = await axios.put("https://e-commerce-backend-pl30.onrender.com/api/v1/auth/profile", {
+            const { data } = await axios.put("https://mobile-backend-taxn.onrender.com/api/v1/auth/profile", {
                 name,
                 email,
                 password,

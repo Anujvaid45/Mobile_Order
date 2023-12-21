@@ -25,7 +25,7 @@ const HomePage = () => {
   //get Total count of products
   const getTotal = async () => {
     try {
-      const { data } = await axios.get('http://localhost:5000/api/v1/product/product-count')
+      const { data } = await axios.get('https://mobile-backend-taxn.onrender.com/api/v1/product/product-count')
       setTotal(data?.total)
     } catch (error) {
       console.log(error)
@@ -48,7 +48,7 @@ const HomePage = () => {
   const loadMore = async () => {
     try {
       setLoading(true);
-      const { data } = await axios.get(`http://localhost:5000/api/v1/product/product-list/${page}`);
+      const { data } = await axios.get(`https://mobile-backend-taxn.onrender.com/api/v1/product/product-list/${page}`);
       setLoading(false);
       setProducts([...products, ...data?.products]);
     } catch (error) {
@@ -64,7 +64,7 @@ const HomePage = () => {
   const getAllProducts = async () => {
     try {
       setLoading(true);
-      const { data } = await axios.get(`http://localhost:5000/api/v1/product/product-list/${page}`);
+      const { data } = await axios.get(`https://mobile-backend-taxn.onrender.com/api/v1/product/product-list/${page}`);
       setLoading(false);
       setProducts(data.products);
     } catch (error) {
@@ -87,7 +87,7 @@ const HomePage = () => {
   //get filtered product
   const filterProduct = async () => {
     try {
-      const { data } = await axios.post("http://localhost:5000/api/v1/product/product-filters", {
+      const { data } = await axios.post("https://mobile-backend-taxn.onrender.com/api/v1/product/product-filters", {
         radio,
         memory,
       });
@@ -142,7 +142,7 @@ const HomePage = () => {
 
               <div className="card m-2" style={{ width: "21rem" }}>
                 <img
-                  src={`http://localhost:5000/api/v1/product/product-photo/${p._id}`}
+                  src={`https://mobile-backend-taxn.onrender.com/api/v1/product/product-photo/${p._id}`}
                   className="card-img-top"
                   alt={p.name}
                   onClick={() => navigate(`/product/${p.slug}`)}

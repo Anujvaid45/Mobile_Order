@@ -28,7 +28,7 @@ const handleCreate = async(e)=>{
       productData.append("photo", photo);
       productData.append("memory",memory);
       productData.append("processor", processor);
-    const res = await axios.post('http://localhost:5000/api/v1/product/create-product',productData)
+    const res = await axios.post('https://mobile-backend-taxn.onrender.com/api/v1/product/create-product',productData)
     if(res.data.success)
     {
       toast.success("Product Created Successfully");
