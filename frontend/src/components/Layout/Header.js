@@ -2,11 +2,12 @@ import { NavLink,Link } from "react-router-dom";
 import { useAuth } from "../../context/Auth.js";
 import { toast } from 'react-toastify';
 import SearchInput from "../Form/SearchInput";
-// import { useCart } from "../../context/cart";
-// import { Badge } from "antd";
+import { useCart } from "../../context/Cart";
+import { Badge } from "antd";
 const Header = () => {
 
   const [auth,setAuth] = useAuth()
+  const [cart] = useCart()
   const handleLogout = () =>{
     setAuth({
       ...auth,user:null,token:''
@@ -92,11 +93,11 @@ const Header = () => {
                 </>
               )}
                <li className="nav-item" style={{fontSize:'40px'}}>
-                {/* <Badge count={cart?.length} showZero> */}
+                <Badge count={cart?.length} showZero>
                   <NavLink to="/cart" className="nav-link" style={{color:'solidBlack',fontSize:'large'}}>
                     Cart
                   </NavLink>
-                {/* </Badge> */}
+                </Badge>
               </li>
             </ul>
           </div>

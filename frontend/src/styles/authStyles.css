@@ -128,7 +128,7 @@ button:hover{
 	border: 1px solid #ccc;
 	border-radius: 4px;
 	transition: background-color 0.3s, color 0.3s;
-	margin-left: 115px;
+	margin-left: 20%;
   }
   
   .label:hover {

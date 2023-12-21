@@ -15,11 +15,16 @@ import UserRoute from './components/Routes/UserRoute.js';
 import UserDashboard from './pages/user/UserDashboard.js';
 import UserProfile from './pages/user/UserProfile.js';
 import UserOrder from './pages/user/UserOrder.js';
+import ProductDetails from './pages/ProductDetails.js';
+import CartPage from './pages/CartPage.js';
 function App() {
   return (
     <BrowserRouter>
     <Routes>
     <Route path='/' element={<HomePage />}/>
+    <Route path='/product/:slug' element={<ProductDetails />}/>
+    <Route path='/cart' element={<CartPage/>}/>
+
       <Route path='/login' element={<Login />}/>
       <Route path='/register' element={<Register />}/>
       <Route path='/search' element={<Search/>}/>

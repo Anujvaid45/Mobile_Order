@@ -7,20 +7,21 @@ import { Prices } from "../components/Prices";
 import { Memory } from "../components/Memory";
 import { useNavigate } from "react-router-dom";
 import '../styles/HomePage.css'
-// import { useCart } from "../context/cart";
+import { useCart } from "../context/Cart";
 const HomePage = () => {
 
   // eslint-disable-next-line 
   const [products, setProducts] = useState([])
-  // const [checked, setChecked] = useState([])
   const [radio, setRadio] = useState([]);
   const [memory, setMemory] = useState("");
 
   const [total, setTotal] = useState(0)
   const [page, setPage] = useState(1)
   const [loading, setLoading] = useState(false)
+  const [loadingMore, setLoadingMore] = useState(false);
+
   const navigate = useNavigate()
-  // const [cart,setCart] = useCart()
+  const [cart,setCart] = useCart()
 
   //get Total count of products
   const getTotal = async () => {
@@ -50,7 +51,15 @@ const HomePage = () => {
       setLoading(true);
       const { data } = await axios.get(`https://mobile-backend-taxn.onrender.com/api/v1/product/product-list/${page}`);
       setLoading(false);
-      setProducts([...products, ...data?.products]);
+
+      // setProducts([...products, ...data?.products]);
+      setProducts((prevProducts) => {
+        if (radio.length || memory) {
+          return [...prevProducts, ...data?.products.filter(product => filterProduct(product))];
+        }
+        // If no filters, simply append new products
+        return [...prevProducts, ...data?.products];
+      });
     } catch (error) {
       console.log(error);
       setLoading(false);
@@ -158,14 +167,14 @@ const HomePage = () => {
                   <button className="btn btn-primary ms-1" onClick={() => navigate(`/product/${p.slug}`)}>More Details</button>
                   <button
                     className="btn btn-secondary ms-1"
-                  // onClick={() => {
-                  //   setCart([...cart, p]);
-                  //   localStorage.setItem(
-                  //     "cart",
-                  //     JSON.stringify([...cart, p])
-                  //   );
-                  //   toast.success("Item Added to cart");
-                  // }}
+                  onClick={() => {
+                    setCart([...cart, p]);
+                    localStorage.setItem(
+                      "cart",
+                      JSON.stringify([...cart, p])
+                    );
+                    toast.success("Item Added to cart");
+                  }}
                   >
                     ADD TO CART
                   </button>
@@ -175,7 +184,8 @@ const HomePage = () => {
             ))}
           </div>
           <div className="m-2 p-3">
-            {products && products.length < total && (
+          {console.log("Products Length:", products.length, "Total:", total)}
+            {products.length!=0 && products && products.length < total && (
               < button className="btn btn-warning"
                 onClick={(e) => {
                   e.preventDefault();

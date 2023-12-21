@@ -234,9 +234,9 @@ const deleteProductController = async(req,res)=>{
     try {
         const {pid,cid} =  req.params
         const products =  await productModel.find({
-            category:cid,
+            processor:cid,
             _id:{$ne:pid} //ne means not include and we are not including that product which is currently being displayed
-        }).select("-photo").limit(4).populate("processor")
+        }).select("-photo").limit(4)
         res.status(200).send({
             success:true,
             products, 
