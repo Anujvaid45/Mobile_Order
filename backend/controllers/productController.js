@@ -3,6 +3,7 @@ const productModel = require('../models/productModel.js')
 require('dotenv').config()
 const fs = require('fs')
 var braintree = require("braintree");
+const orderModel = require('../models/orderModel.js')
 
 //payment gateway
 var gateway = new braintree.BraintreeGateway({
