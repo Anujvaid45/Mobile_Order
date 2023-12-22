@@ -128,3 +128,47 @@ code {
 
 
 
+/* Contact.css */
+
+/* Adjust the styles as needed based on your design preferences */
+
+/* Form styling */
+#contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-control {
+  border-radius: 0;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 0;
+}
+
+/* Contact Information styling */
+.text-center.text-md-left {
+  margin-top: 20px;
+}
+
+.list-unstyled {
+  padding: 0;
+  list-style: none;
+}
+
+.list-unstyled li {
+  margin-bottom: 20px;
+}
+
+.list-unstyled li i {
+  color: #007bff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #contact-form {
+    max-width: 100%;
+  }
+}

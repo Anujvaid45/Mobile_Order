@@ -17,6 +17,9 @@ import UserProfile from './pages/user/UserProfile.js';
 import UserOrder from './pages/user/UserOrder.js';
 import ProductDetails from './pages/ProductDetails.js';
 import CartPage from './pages/CartPage.js';
+import AboutUs from './pages/AboutUs.js';
+import Contact from './pages/Contact.js';
+import Policy from './pages/Policy.js';
 function App() {
   return (
     <BrowserRouter>
@@ -28,6 +31,9 @@ function App() {
       <Route path='/login' element={<Login />}/>
       <Route path='/register' element={<Register />}/>
       <Route path='/search' element={<Search/>}/>
+      <Route path='/about' element={<AboutUs/>}/>
+      <Route path='/contact' element={<Contact/>}/>
+      <Route path='/policy' element={<Policy/>}/>
 
       <Route path="/dashboard" element={<UserRoute />}>
           <Route path="user" element={<UserDashboard />} />
