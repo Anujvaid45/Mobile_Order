@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 const {requireSignIn,isAdmin} = require('../middlewares/authMiddleware.js')
 //controller functions
-const {registerController,loginController, updateProfileController} = require('../controllers/authController')
+const {registerController,loginController, updateProfileController,orderStatusController,getOrdersController,getAllOrdersController} = require('../controllers/authController')
 
 
 //register
@@ -23,6 +23,15 @@ router.get('/admin-auth',requireSignIn,isAdmin,(req,res)=>{
 
 //update the user profile
 router.put('/profile',requireSignIn,updateProfileController)
+
+//all orders of user
+router.get('/orders',requireSignIn,getOrdersController)
+
+//all orders data for admin
+router.get('/all-orders',requireSignIn,isAdmin,getAllOrdersController)
+
+//order status
+router.put("/order-status/:orderId",requireSignIn,isAdmin,orderStatusController)
 
 module.exports = router
 
