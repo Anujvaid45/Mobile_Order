@@ -43,8 +43,8 @@ const ProductDetails = () => {
         }
     };
     return (
-        <Layout title={`${product.name}`}>
-            <div className="row container product-details">
+        <Layout title={`${product.name}`} >
+            <div className="row container product-details justify-center">
                 <div className="col-md-6">
                     <img
                         src={`https://mobile-backend-taxn.onrender.com/api/v1/product/product-photo/${product._id}`}
@@ -78,15 +78,15 @@ const ProductDetails = () => {
 
             </div>
             <hr />
-            <div className="row container similar-products">
+            <div className="row container similar-products justify-center" >
                 <h4>Similar Products ➡️</h4>
                 {relatedProducts.length < 1 && (
                     <p className="text-center">No Similar Products found</p>
                 )}
-                <div className="d-flex flex-wrap">
+                <div className="d-flex flex-wrap justify-center">
                     {relatedProducts?.map((p) => (
 
-                        <div className="card m-2" key={p._id}>
+                        <div className="card m-2 padding5" key={p._id}>
                             <img
                                 src={`https://mobile-backend-taxn.onrender.com/api/v1/product/product-photo/${p._id}`}
                                 className="card-img-top"

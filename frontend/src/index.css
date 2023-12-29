@@ -1,85 +1,83 @@
-/* body {
+/* Reset and Font Styles */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Playfair+Display:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
-} */
-
-
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Playfair+Display:wght@700&display=swap');
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing:border-box ;
 }
 
-/* navbar css */
-
-.navbar{
-  font-family: 'Poppins',sans-serif;
+/* Navbar Styles */
+.navbar {
+  font-family: "Poppins", sans-serif;
   font-size: 17px;
   line-height: 26px;
   text-transform: uppercase;
   box-shadow: 0px 8px 6px -6px gray;
-  --webkit-box-shadow:0px 8px 6px -6px gray;
+  --webkit-box-shadow: 0px 8px 6px -6px gray;
   border-bottom: solid gray !important;
 }
 
-.nav-link{
-  font-weight: 300 !important;
+.nav-link {
+  font-weight: bold !important;
+  font-family: "Roboto", sans-serif;
 }
-.nav-link:hover{
-  border-bottom:2px solid black ;
-}
-/* .active{
+.nav-link:hover {
   border-bottom: 2px solid black;
-} */
-.navbar-brand{
+}
+
+.navbar-brand {
   font-weight: 700;
-  font-family: 'roboto',sans-serif;
+  font-family: "Roboto", sans-serif;
   letter-spacing: normal;
 }
 
-/* *********************footer************************ */
-.footer{
-  color:white;
+/* Footer Styles */
+.footer {
+  color: white;
   padding: 25px;
-  background: linear-gradient(to right,#434343,#000000);
+  background: linear-gradient(to right, #434343, #000000);
 }
-
-.footer a{
+.footer a {
   text-decoration: none;
   color: white;
   padding: 10px;
 }
-.footer a:hover{
-  color:#ffefba;
+.footer a:hover {
+  color: #ffefba;
   border-bottom: 1px solid #ffefba;
 }
 
-/* ****************************pnf css ************************** */
-.pnf{
+/* Page Not Found Styles */
+.pnf {
   display: flex;
   min-height: 65vh;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.pnf-title{
+.pnf-title {
   font-size: 100px;
   font-weight: 700;
 }
-.pnf-heading{
+.pnf-heading {
   font-weight: normal;
 }
-.pnf-btn{
+.pnf-btn {
   color: black;
   border: 1px solid black;
   text-decoration: none;
@@ -87,8 +85,8 @@ code {
   margin-top: 10px;
 }
 
-/* **************************contact us ******************* */
-.contactus{
+/* Contact Us Styles */
+.contactus {
   margin: 0;
   padding: 0;
   height: 75vh;
@@ -97,78 +95,59 @@ code {
   justify-content: center;
 }
 
-/*********************** register ********************** */
-.register{
+/* Register Styles */
+.register {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 75vh;
   flex-direction: column;
-
 }
 * {
-
   margin: 0;
-
 }
 
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-
-
-/* Contact.css */
-
-/* Adjust the styles as needed based on your design preferences */
-
-/* Form styling */
+/* Contact Form Styles */
 #contact-form {
   max-width: 600px;
   margin: 0 auto;
 }
-
 .form-control {
   border-radius: 0;
 }
-
 .btn-primary {
   background-color: #007bff;
   color: #fff;
   border-radius: 0;
 }
-
-/* Contact Information styling */
 .text-center.text-md-left {
   margin-top: 20px;
 }
-
 .list-unstyled {
   padding: 0;
   list-style: none;
 }
-
 .list-unstyled li {
   margin-bottom: 20px;
 }
-
 .list-unstyled li i {
   color: #007bff;
 }
-
-/* Responsive adjustments */
 @media (max-width: 768px) {
   #contact-form {
     max-width: 100%;
   }
+}
+.padding10 {
+  padding: 10px;
+}
+
+.align-center {
+  align-items: center;
+}
+.justify-center {
+  justify-content: center;
+}
+.padding5 {
+  padding: 5px;
 }

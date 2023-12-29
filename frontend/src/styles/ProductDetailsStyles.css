@@ -1,50 +1,62 @@
-/* Add these styles to your existing CSS */
-
 .product-details-info {
-    padding: 20px;
-    text-align: center;
-    background-color: #f8f9fa;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .product-details-info h1 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #007bff;
-  }
-  
-  .product-details-info hr {
-    border: 1px solid #007bff;
-    margin: 15px auto;
-    width: 50%;
-  }
-  
-  .product-details-info h6 {
-    margin-bottom: 15px;
-    font-size: 1rem;
-    color: #495057;
-  }
-  
-  .product-details-info .price {
-    font-size: 1.2rem;
-    font-weight: bold;
-  }
-  
-  .product-details-info button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 1rem;
-    background-color: transparent;
-    color: #007bff;
-    border: 1px solid #007bff;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-  }
-  
-  .product-details-info button:hover {
-    background-color: #007bff;
-    color: #fff;
-  }
-  
+  padding: 20px;
+  text-align: center;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-details-info h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #007bff;
+}
+
+.product-details-info hr {
+  border: 1px solid #007bff;
+  margin: 15px auto;
+  width: 50%;
+}
+
+.product-details-info h6 {
+  margin-bottom: 15px;
+  font-size: 1rem;
+  color: #495057;
+}
+
+.product-details-info .price {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.product-details-info button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: transparent;
+  color: #007bff;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.product-details-info button:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.padding10 {
+  padding: 10px;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+.padding5 {
+  padding: 5px;
+}
