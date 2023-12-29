@@ -1,53 +1,138 @@
+/* Style for the product card */
+.card {
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transitions for hover effects */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Scale up on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow on hover */
+}
+
+/* Style for the product title */
+.card-title {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  transition: color 0.3s ease; /* Add transition for color change on hover */
+}
+
+.card:hover .card-title {
+  color: #3498db; /* Change color on hover */
+}
+
+/* Style for the product description */
+.card-text {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Style for the product image */
+.card-img-top {
+  cursor: pointer;
+  transition: opacity 0.3s ease; /* Add transition for opacity change on hover */
+}
+
+.card-img-top:hover {
+  opacity: 0.8; /* Reduce opacity on hover */
+}
+
+/* Style for the product buttons */
+.card-body button {
+  transition: background-color 0.3s ease; /* Add transition for background color change on hover */
+}
+
+.card-body button:hover {
+  background-color: #2ecc71; /* Change background color on hover */
+}
+
 /* Container styling */
-.filter-container {
-    margin-top: 20px;
+/* .filter-container {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+} */
+
+/* Hover effect for the filter container */
+/* .filter-container:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+} */
+
+/* Header styling */
+.filter-header {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 1.5rem;
+  color: #2c3e50;
+}
+
+/* Style for the radio group container */
+.radio-group-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+/* Style for individual radio options */
+.radio-option {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+/* Radio styling */
+.ant-radio-wrapper {
+  margin-right: 8px;
+}
+
+/* Radio label styling */
+.ant-radio {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Style for the horizontal line */
+.hr-line {
+  border-top: 1px solid #ddd;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+/* Style for the price filter */
+.price-filter-container {
+  margin-top: 20px;
+}
+
+/* Style for the reset button */
+.reset-button-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+/* Reset button styling */
+.reset-button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the reset button */
+.reset-button:hover {
+  background-color: #2980b9;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .filter-container {
+    padding: 15px;
   }
-  
-  /* Header styling */
-  .filter-header {
-    text-align: center;
-    margin-top: 10px;
-    font-size: 18px;
-  }
-  
-  /* Style for the radio group container */
-  .radio-group-container {
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px;
-  }
-  
-  /* Style for individual radio options */
-  .radio-option {
-    margin-bottom: 8px;
-  }
-  
-  /* Style for the horizontal line */
-  .hr-line {
-    border-top: 1px solid #ccc;
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-  
-  /* Style for the price filter */
-  .price-filter-container {
-    margin-top: 20px;
-  }
-  
-  /* Style for the reset button */
-  .reset-button-container {
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-  }
-  
-  /* Optional: If you want to style the reset button differently */
-  .reset-button {
-    background-color: black;
-    color: white;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    margin-top: 5px;
-  }
-  
+}

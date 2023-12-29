@@ -21,25 +21,47 @@ const SearchInput = () => {
     
   };
   return (
-    <div>
-      <form
-        className="d-flex search-form"
-        role="search"
-        onSubmit={handleSubmit}
-      >
-        <input
-          className="form-control me-2"
-          type="search"
-          placeholder="Search"
-          aria-label="Search"
-          value={values.keyword}
-          onChange={(e) => setValues({ ...values, keyword: e.target.value })}
-        />
-        <button className="btn btn-outline-success" type="submit">
-          Search
-        </button>
-      </form>
-    </div>
+<div>
+  <form
+    style={{
+      display: 'flex',
+      alignItems: 'center',
+    }}
+    role="search"
+    onSubmit={handleSubmit}
+  >
+    <input
+      style={{
+        flex: '1',
+        marginRight: '10px',
+        padding: '8px',
+        border: '1px solid #ced4da',
+        borderRadius: '4px',
+        fontSize: '16px',
+      }}
+      type="search"
+      placeholder="Search"
+      aria-label="Search"
+      value={values.keyword}
+      onChange={(e) => setValues({ ...values, keyword: e.target.value })}
+    />
+    <button
+      style={{
+        padding: '8px 16px',
+        border: '1px solid #28a745',
+        borderRadius: '4px',
+        fontSize: '16px',
+        backgroundColor: '#28a745',
+        color: '#fff',
+        cursor: 'pointer',
+      }}
+      type="submit"
+    >
+      Search
+    </button>
+  </form>
+</div>
+
   );
 };
 

@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
+// import '../../styles/footer.css'
 const Footer = () => {
     return ( 
         <div className= "footer">
-            <h4 className="text-center">All Right Reserved &copy; Anuj Vaid</h4>
+            <h4 className="text-center">All Right Reserved &copy;Group-3</h4>
             <p className="text-center mt-3">
                 <Link to='/about'>About</Link>|
                 <Link to='/contact'>Contact</Link>|

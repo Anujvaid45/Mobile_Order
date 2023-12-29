@@ -20,11 +20,13 @@ import CartPage from './pages/CartPage.js';
 import AboutUs from './pages/AboutUs.js';
 import Contact from './pages/Contact.js';
 import Policy from './pages/Policy.js';
+import Welcome from './pages/Welcome.js';
 function App() {
   return (
     <BrowserRouter>
     <Routes>
-    <Route path='/' element={<HomePage />}/>
+    <Route path='/products' element={<HomePage />}/>
+    <Route path='/' element={<Welcome/>}/>
     <Route path='/product/:slug' element={<ProductDetails />}/>
     <Route path='/cart' element={<CartPage/>}/>
 

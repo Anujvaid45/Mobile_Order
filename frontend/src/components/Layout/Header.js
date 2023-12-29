@@ -4,6 +4,7 @@ import { toast } from 'react-toastify';
 import SearchInput from "../Form/SearchInput";
 import { useCart } from "../../context/Cart";
 import { Badge } from "antd";
+// import '../../styles/header.css'
 const Header = () => {
 
   const [auth,setAuth] = useAuth()
@@ -33,14 +34,19 @@ const Header = () => {
             <span className="navbar-toggler-icon" />
           </button>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <Link to="/" className="navbar-brand" style={{fontWeight:'400'}}>
-            Mobile Ordering Application
+            <Link to="/" className="navbar-brand" style={{fontWeight:'400',fontStyle:"",fontSize:'50px'}}>
+            𝓿𝔂𝓪𝓪𝓹𝓪𝓪𝓻 
             </Link>
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <SearchInput></SearchInput>
               <li className="nav-item">
                 <NavLink to="/" className="nav-link ">
                   Home
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink to="/products" className="nav-link ">
+                  Products
                 </NavLink>
               </li>
               {!auth?.user ?(

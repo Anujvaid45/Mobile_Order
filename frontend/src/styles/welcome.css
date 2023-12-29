@@ -1,0 +1,112 @@
+/* welcome.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    scroll-behavior: smooth;
+    background-color: #f8f8f8;
+    color: #333;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  /* Hero Section */
+  #home {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(to right, #30cfd0, #330867);
+    color: #fff;
+    padding: 2rem;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  #home h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  #home p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  #home button {
+    background-color: #ffcc00;
+    color: #333;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  #home button:hover {
+    background-color: #e5b200;
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Featured Products Section */
+  #products {
+    background: linear-gradient(to left, #30cfd0, #330867);
+    padding: 4rem 0;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .featured-products {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .product-card {
+    text-align: center;
+    
+    border-radius: 8px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .product-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .product-card h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    color: #fff;
+  }
+  
+  /* Scrolling Effects */
+  #home.active,
+  #products.active {
+    animation: fadeIn 1s ease-out forwards;
+  }
+  
+  /* Add more styling as needed */
+  
