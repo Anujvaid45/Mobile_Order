@@ -11,7 +11,7 @@ const Welcome = () => {
         {/* Hero Section */}
         <section id="home">
           <div className="hero-content">
-            <h1>Welcome to व्यापर</h1>
+            <h1>Welcome to व्यापार</h1>
             <p>
               Explore a world of innovation and excellence. Discover amazing
               products and services tailored to suit your needs.
